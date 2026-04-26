@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary SEO -->
+    <title>PepeCodes | Backend Python & Automatyzacja Procesów Biznesowych</title>
+    <meta name="description" content="Profesjonalne usługi backend Python, Django, FastAPI oraz automatyzacja procesów biznesowych dla małych i średnich firm. Tworzenie API REST, mikroserwisów, baz danych i wdrożeń DevOps.">
+    <meta name="keywords" content="backend python, programista python, django developer, fastapi developer, automatyzacja procesów, automatyzacja biznesu, API REST, django rest framework, tworzenie stron internetowych, backend developer, python freelancer, mikroserwisy, architektura oprogramowania, baza danych postgresql, docker, devops, python consultant, skrypty python, integracja systemów, optymalizacja procesów, małe i średnie firmy, MŚP">
+    <meta name="author" content="PepeCodes">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://pepecodes.com/pl">
+    
+    <!-- Language Alternates -->
+    <link rel="alternate" hreflang="en" href="https://pepecodes.com/">
+    <link rel="alternate" hreflang="pl" href="https://pepecodes.com/pl">
+    <link rel="alternate" hreflang="x-default" href="https://pepecodes.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pepecodes.com/pl">
+    <meta property="og:title" content="PepeCodes | Backend Python & Automatyzacja Procesów Biznesowych">
+    <meta property="og:description" content="Profesjonalne usługi backend Python, Django, FastAPI oraz automatyzacja procesów biznesowych dla małych i średnich firm.">
+    <meta property="og:image" content="https://pepecodes.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="PepeCodes">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pepecodes.com/pl">
+    <meta name="twitter:title" content="PepeCodes | Backend Python & Automatyzacja Procesów Biznesowych">
+    <meta name="twitter:description" content="Profesjonalne usługi backend Python, Django, FastAPI oraz automatyzacja procesów biznesowych dla małych i średnich firm.">
+    <meta name="twitter:image" content="https://pepecodes.com/twitter-image.jpg">
+    
+    <!-- Additional SEO Meta -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PepeCodes">
+    <meta name="application-name" content="PepeCodes">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "PepeCodes",
+        "description": "Profesjonalne usługi backend Python, Django, FastAPI oraz automatyzacja procesów biznesowych dla małych i średnich firm.",
+        "url": "https://pepecodes.com",
+        "email": "kontakt@pepecodes.pl",
+        "priceRange": "$$",
+        "serviceType": ["Backend Development", "API Development", "Automatyzacja procesów", "Web Development", "DevOps", "Konsultacje"],
+        "areaServed": "Polska",
+        "knowsAbout": ["Python", "Django", "Django REST Framework", "FastAPI", "PostgreSQL", "Docker", "AWS", "Redis", "Mikroserwisy", "REST API", "Automatyzacja procesów biznesowych"],
+        "sameAs": [
+            "https://github.com/pepecodes",
+            "https://linkedin.com/in/pepecodes"
+        ]
+    }
+    </script>
+    
+    <!-- Structured Data - WebPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "PepeCodes | Backend Python & Automatyzacja Procesów Biznesowych",
+        "description": "Profesjonalne usługi backend Python, Django, FastAPI oraz automatyzacja procesów biznesowych dla małych i średnich firm.",
+        "url": "https://pepecodes.com/pl",
+        "inLanguage": "pl",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "PepeCodes",
+            "url": "https://pepecodes.com"
+        }
+    }
+    </script>
+    
+    <!-- Structured Data - Services -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Usługi Backend Developmentu",
+        "itemListElement": [
+            {
+                "@type": "Service",
+                "position": 1,
+                "name": "API REST-owe",
+                "description": "Projektowanie i budowa skalowalnych API przy użyciu Django REST Framework lub FastAPI.",
+                "serviceType": "API Development"
+            },
+            {
+                "@type": "Service",
+                "position": 2,
+                "name": "Backend aplikacji webowych",
+                "description": "Pełnofunkcjonalne systemy backendowe oparte na Django.",
+                "serviceType": "Web Development"
+            },
+            {
+                "@type": "Service",
+                "position": 3,
+                "name": "Automatyzacja procesów",
+                "description": "Identyfikacja i automatyzacja powtarzalnych procesów w firmie.",
+                "serviceType": "Business Automation"
+            },
+            {
+                "@type": "Service",
+                "position": 4,
+                "name": "Architektura mikroserwisów",
+                "description": "Projektowanie i implementacja architektury mikroserwisów z FastAPI.",
+                "serviceType": "Architecture Consulting"
+            },
+            {
+                "@type": "Service",
+                "position": 5,
+                "name": "Projektowanie baz danych",
+                "description": "Ekspertyza w architekturze baz danych, optymalizacji zapytań i migracjach.",
+                "serviceType": "Database Consulting"
+            },
+            {
+                "@type": "Service",
+                "position": 6,
+                "name": "DevOps i wdrożenia",
+                "description": "Konfiguracja pipeline'ów CI/CD, wdrożenia chmurowe i automatyzacja infrastruktury.",
+                "serviceType": "DevOps"
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 2rem 4rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .hero-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--primary-light);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease 0.1s both;
+        }
+
+        .hero h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray-light);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            animation: fadeInUp 0.6s ease 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--white);
+            padding: 4rem 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .stats-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--light);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .service-tag {
+            background: var(--light);
+            color: var(--gray);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Automation Section */
+        .automation {
+            background: var(--white);
+        }
+
+        .automation-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .automation-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .automation-text h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .automation-text p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .automation-visual {
+            background: var(--gradient);
+            border-radius: 20px;
+            padding: 3rem;
+            color: var(--white);
+        }
+
+        .automation-visual h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .automation-stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .automation-stat:last-child {
+            border-bottom: none;
+        }
+
+        .automation-stat-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .automation-stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Technologies Section */
+        .technologies {
+            background: var(--light);
+        }
+
+        .tech-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-item {
+            background: var(--white);
+            padding: 2rem 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .tech-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .tech-item p {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* Process Section */
+        .process {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .process .section-header h2 {
+            color: var(--white);
+        }
+
+        .process .section-header p {
+            color: var(--gray-light);
+        }
+
+        .process-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step p {
+            color: var(--gray-light);
+            font-size: 0.95rem;
+        }
+
+        /* Why Choose Me Section */
+        .why-me {
+            background: var(--white);
+        }
+
+        .why-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-item {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 16px;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .why-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .why-item h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .why-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--light);
+        }
+
+        .testimonials-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            color: var(--dark);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .author-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .author-info p {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* CTA Section */
+        .cta {
+            background: var(--gradient);
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta .btn {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.25rem;
+        }
+
+        .contact-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--gray-light);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .automation-intro {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Przejdź do głównej treści</a>
+    
+    <!-- Navigation -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="logo">PepeCodes</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Usługi</a></li>
+                <li><a href="#automation">Automatyzacja</a></li>
+                <li><a href="#technologies">Technologie</a></li>
+                <li><a href="#process">Proces</a></li>
+                <li><a href="#why-me">Dlaczego ja</a></li>
+                <li><a href="#testimonials">Opinie</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+    <section class="hero" id="home" aria-label="Wprowadzenie">
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Dostępny dla nowych projektów</div>
+            <h1>Backend Python & <span>Automatyzacja</span> dla Twojego Biznesu</h1>
+            <p>Specjalizuję się w tworzeniu nowoczesnych systemów backendowych oraz automatyzacji procesów biznesowych dla małych i średnich firm. Oszczędzaj czas, redukuj koszty i skaluj swój biznes.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Porozmawiajmy
+                </a>
+                <a href="#automation" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Dowiedz się więcej
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Zrealizowanych projektów</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Lat doświadczenia</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">70%</div>
+                <div class="stat-label">Średnia oszczędność czasu</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Zaangażowanie</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <span class="section-tag">Usługi</span>
+            <h2>Co mogę dla Ciebie zrobić</h2>
+            <p>Kompleksowe usługi backend developmentu i automatyzacji dostosowane do potrzeb Twojej firmy.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3>API REST-owe</h3>
+                <p>Projektowanie i budowa skalowalnych, dobrze udokumentowanych API przy użyciu Django REST Framework lub FastAPI. Czysta architektura, bezpieczne uwierzytelnianie i kompleksowe testy.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Django REST</span>
+                    <span class="service-tag">FastAPI</span>
+                    <span class="service-tag">OpenAPI</span>
+                    <span class="service-tag">JWT</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+                <h3>Backend aplikacji webowych</h3>
+                <p>Pełnofunkcjonalne systemy backendowe oparte na Django. Uwierzytelnianie użytkowników, panele administracyjne, projektowanie baz danych i integracja z frontendem.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Django</span>
+                    <span class="service-tag">PostgreSQL</span>
+                    <span class="service-tag">Redis</span>
+                    <span class="service-tag">Celery</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                    </svg>
+                </div>
+                <h3>Automatyzacja procesów</h3>
+                <p>Identyfikacja i automatyzacja powtarzalnych procesów w Twojej firmie. Od prostych skryptów po zaawansowane systemy workflow, które oszczędzają godziny pracy każdego tygodnia.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Python Scripts</span>
+                    <span class="service-tag">Celery</span>
+                    <span class="service-tag">Cron Jobs</span>
+                    <span class="service-tag">API Integration</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <h3>Architektura mikroserwisów</h3>
+                <p>Projektowanie i implementacja architektury mikroserwisów z FastAPI. Systemy event-driven, kolejki komunikatów i konteneryzacja dla maksymalnej skalowalności.</p>
+                <div class="service-tags">
+                    <span class="service-tag">FastAPI</span>
+                    <span class="service-tag">Docker</span>
+                    <span class="service-tag">RabbitMQ</span>
+                    <span class="service-tag">gRPC</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                </div>
+                <h3>Projektowanie baz danych</h3>
+                <p>Ekspertyza w architekturze baz danych, optymalizacji zapytań i migracjach. Od projektowania schematów po tuning wydajności, zapewniając efektywną i niezawodną warstwę danych.</p>
+                <div class="service-tags">
+                    <span class="service-tag">PostgreSQL</span>
+                    <span class="service-tag">MySQL</span>
+                    <span class="service-tag">MongoDB</span>
+                    <span class="service-tag">SQLAlchemy</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M18 20V10M12 20V4M6 20v-6"></path>
+                    </svg>
+                </div>
+                <h3>DevOps i wdrożenia</h3>
+                <p>Konfiguracja pipeline'ów CI/CD, wdrożenia chmurowe i automatyzacja infrastruktury. Kontenery Docker, orkiestracja Kubernetes i monitoring dla systemów produkcyjnych.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Docker</span>
+                    <span class="service-tag">AWS</span>
+                    <span class="service-tag">GitHub Actions</span>
+                    <span class="service-tag">Nginx</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automation Section -->
+    <section class="automation" id="automation">
+        <div class="section-header">
+            <span class="section-tag">Automatyzacja</span>
+            <h2>Automatyzacja procesów dla MŚP</h2>
+            <p>Odkryj, jak automatyzacja może transformować Twoją firmę i uwolnić potencjał wzrostu.</p>
+        </div>
+        <div class="automation-content">
+            <div class="automation-intro">
+                <div class="automation-text">
+                    <h3>Dlaczego automatyzacja jest kluczowa dla Twojej firmy?</h3>
+                    <p>Małe i średnie firmy tracą średnio <strong>20-30 godzin tygodniowo</strong> na powtarzalne, ręczne zadania. To czas, który mógłby być poświęcony na rozwój biznesu, obsługę klientów i innowacje.</p>
+                    <p>Automatyzacja procesów biznesowych to nie tylko oszczędność czasu – to <strong>strategiczna inwestycja</strong>, która pozwala Twojej firmie działać szybciej, dokładniej i bardziej profesjonalnie niż konkurencja.</p>
+                    <p>Specjalizuję się w identyfikacji obszarów wymagających automatyzacji oraz tworzeniu dedykowanych rozwiązań dopasowanych do specyfiki Twojego biznesu. Od prostych skryptów po zaawansowane systemy integrujące wiele narzędzi.</p>
+                </div>
+                <div class="automation-visual">
+                    <h4>Średnie korzyści z automatyzacji</h4>
+                    <div class="automation-stat">
+                        <span class="automation-stat-label">Oszczędność czasu</span>
+                        <span class="automation-stat-value">70%</span>
+                    </div>
+                    <div class="automation-stat">
+                        <span class="automation-stat-label">Redukcja błędów</span>
+                        <span class="automation-stat-value">90%</span>
+                    </div>
+                    <div class="automation-stat">
+                        <span class="automation-stat-label">Wzrost produktywności</span>
+                        <span class="automation-stat-value">3x</span>
+                    </div>
+                    <div class="automation-stat">
+                        <span class="automation-stat-label">ROI w pierwszym roku</span>
+                        <span class="automation-stat-value">250%</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; font-size: 1.75rem; font-weight: 700; color: var(--dark); margin-bottom: 3rem;">Korzyści z automatyzacji procesów</h3>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏱️</div>
+                    <h4>Oszczędność czasu</h4>
+                    <p>Automatyzacja powtarzalnych zadań uwalnia godziny pracy każdego tygodnia. Twój zespół może skupić się na zadaniach strategicznych zamiast na ręcznym przetwarzaniu danych.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h4>Redukcja kosztów operacyjnych</h4>
+                    <p>Mniej godzin poświęconych na ręczne zadania oznacza niższe koszty pracy. Automatyzacja pozwala obsłużyć większą liczbę klientów bez zwiększania zespołu.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h4>Eliminacja błędów ludzkich</h4>
+                    <p>Automatyczne procesy są spójne i dokładne. Redukcja błędów oznacza mniej poprawek, lepszą jakość danych i wyższą satysfakcję klientów.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h4>Skalowalność biznesu</h4>
+                    <p>Automatyzacja pozwala obsłużyć 10x więcej klientów bez proporcjonalnego wzrostu zatrudnienia. Twój biznes rośnie szybciej i efektywniej.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h4>Integracja systemów</h4>
+                    <p>Połącz swoje narzędzia w spójny ekosystem. Automatyczny przepływ danych między CRM, systemem księgowym, magazynem i innymi platformami.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h4>Lepsze decyzje biznesowe</h4>
+                    <p>Automatyczne raporty i dashboardy dostarczają danych w czasie rzeczywistym. Podejmuj decyzje oparte na faktach, nie na intuicji.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">😊</div>
+                    <h4>Wyższa satysfakcja zespołu</h4>
+                    <p>Pracownicy wykonujący nudne, powtarzalne zadania są mniej zaangażowani. Automatyzacja uwalnia ich potencjał i zwiększa motywację.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h4>Szybsza obsługa klientów</h4>
+                    <p>Automatyczne odpowiedzi, powiadomienia i procesy oznaczają, że Twoi klienci otrzymują szybszą i bardziej spójną obsługę.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies" id="technologies">
+        <div class="section-header">
+            <span class="section-tag">Technologie</span>
+            <h2>Mój stack technologiczny</h2>
+            <p>Nowoczesne, sprawdzone technologie, które napędzają niezawodne i skalowalne rozwiązania backendowe.</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <div class="tech-icon">🐍</div>
+                <h4>Python</h4>
+                <p>3.10+</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">🎯</div>
+                <h4>Django</h4>
+                <p>4.x / 5.x</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">🚀</div>
+                <h4>DRF</h4>
+                <p>REST Framework</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">⚡</div>
+                <h4>FastAPI</h4>
+                <p>Nowoczesne API</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">🐘</div>
+                <h4>PostgreSQL</h4>
+                <p>Główna baza danych</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">🔴</div>
+                <h4>Redis</h4>
+                <p>Cache & Queue</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">🐳</div>
+                <h4>Docker</h4>
+                <p>Konteneryzacja</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">☁️</div>
+                <h4>AWS</h4>
+                <p>Chmura</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">🔄</div>
+                <h4>Celery</h4>
+                <p>Kolejka zadań</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">📊</div>
+                <h4>SQLAlchemy</h4>
+                <p>ORM</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">🧪</div>
+                <h4>Pytest</h4>
+                <p>Testy</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">📝</div>
+                <h4>Git</h4>
+                <p>Version Control</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section-header">
+            <span class="section-tag">Proces</span>
+            <h2>Jak pracuję</h2>
+            <p>Usprawniony, transparentny proces, który zapewnia jakość dostarczanych rozwiązań i jasną komunikację na każdym etapie.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Analiza potrzeb</h3>
+                <p>Zrozumienie Twoich wymagań, celów biznesowych i ograniczeń technicznych poprzez szczegółową konsultację.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Projektowanie architektury</h3>
+                <p>Projektowanie optymalnej architektury systemu, schematu bazy danych i struktury API dopasowanej do Twoich potrzeb.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Implementacja</h3>
+                <p>Agile development z regularnymi aktualizacjami, przeglądami kodu i testami zapewniającymi najwyższą jakość.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Wdrożenie i wsparcie</h3>
+                <p>Wdrożenie produkcyjne z monitoringiem, dokumentacją i ciągłym wsparciem technicznym.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="why-me" id="why-me">
+        <div class="section-header">
+            <span class="section-tag">Dlaczego ja</span>
+            <h2>Co mnie wyróżnia</h2>
+            <p>Specjalistyczna wiedza, niezawodna realizacja i zaangażowanie w Twój sukces.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">✅</div>
+                <div>
+                    <h3>Czysty, utrzymywalny kod</h3>
+                    <p>Przestrzegam PEP 8, zasad SOLID i najlepszych praktyk branżowych, dostarczając kod łatwy w utrzymaniu i skalowaniu.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">🎯</div>
+                <div>
+                    <h3>Podejście zorientowane na rezultaty</h3>
+                    <p>Każda decyzja jest kierowana Twoimi celami biznesowymi. Skupiam się na dostarczaniu realnej wartości, nie tylko na pisaniu kodu.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">🔒</div>
+                <div>
+                    <h3>Bezpieczeństwo od podstaw</h3>
+                    <p>Bezpieczeństwo jest wbudowane od pierwszego dnia. Wytyczne OWASP, odpowiednie uwierzytelnianie i ochrona danych to standard.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">📈</div>
+                <div>
+                    <h3>Skalowalne rozwiązania</h3>
+                    <p>Architektura zaprojektowana tak, aby rosła razem z Twoim biznesem. Od MVP po skalę enterprise, planuję z myślą o przyszłości.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">💬</div>
+                <div>
+                    <h3>Jasna komunikacja</h3>
+                    <p>Regularne aktualizacje, transparentne śledzenie postępów i responsywna komunikacja przez cały czas trwania projektu.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">⏱️</div>
+                <div>
+                    <h3>Terminowość</h3>
+                    <p>Realistyczne harmonogramy, śledzenie kamieni milowych i konsekwentne dostarczanie. Twoje terminy to moje zobowiązanie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <span class="section-tag">Opinie</span>
+            <h2>Co mówią klienci</h2>
+            <p>Opinie zadowolonych klientów, którzy powierzyli mi swoje projekty.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">Świetna praca przy migracji naszego API. Nowy system oparty na FastAPI jest 3x szybszy, a jakość kodu jest wyjątkowa. Gorąco polecam!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JK</div>
+                    <div class="author-info">
+                        <h4>Jan Kowalski</h4>
+                        <p>CTO, TechStartup Sp. z o.o.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Dostarczył backend naszego sklepu internetowego przed terminem. Implementacja Django była solidna, dobrze udokumentowana i łatwa do utrzymania przez nasz zespół.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AN</div>
+                    <div class="author-info">
+                        <h4>Anna Nowak</h4>
+                        <p>Product Manager, ShopFlow</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Automatyzacja procesów, którą dla nas wdrożył, zaoszczędziła nam ponad 25 godzin pracy tygodniowo. Świetna komunikacja i profesjonalne podejście.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MW</div>
+                    <div class="author-info">
+                        <h4>Marek Wiśniewski</h4>
+                        <p>Właściciel, DataSync</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Gotowy, aby zbudować coś wielkiego?</h2>
+        <p>Porozmawiajmy o Twoim projekcie i znajdźmy idealne rozwiązanie dla Twoich potrzeb. Jestem tutaj, aby pomóc przekuć Twoje pomysły w rzeczywistość.</p>
+        <a href="#contact" class="btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Rozpocznij rozmowę
+        </a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-tag">Kontakt</span>
+            <h2>Skontaktuj się ze mną</h2>
+            <p>Masz projekt w głowie? Porozmawiajmy o tym, jak mogę pomóc.</p>
+        </div>
+        <div class="contact-container">
+            <!-- <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email</h4>
+                    <a href="mailto:kontakt@pepecodes.pl">kontakt@nomail.pl</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <h4>LinkedIn</h4>
+                    <a href="#" target="_blank">linkedin.com/in/pepecodes</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🐙</div>
+                    <h4>GitHub</h4>
+                    <a href="#" target="_blank">github.com/pepecodes</a>
+                </div>
+            </div> -->
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdayydvn" method="POST">
+                <input type="hidden" name="_subject" value="Nowe zapytanie ze strony PepeCodes">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Twoje imię i nazwisko</label>
+                        <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adres email</label>
+                        <input type="email" id="email" name="email" required placeholder="jan@firma.pl">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service">Usługa, której potrzebujesz</label>
+                    <select id="service" name="service">
+                        <option value="">Wybierz usługę...</option>
+                        <option value="api">API REST-owe</option>
+                        <option value="web">Backend aplikacji webowej</option>
+                        <option value="automation">Automatyzacja procesów</option>
+                        <option value="microservices">Architektura mikroserwisów</option>
+                        <option value="database">Projektowanie baz danych</option>
+                        <option value="devops">DevOps i wdrożenia</option>
+                        <option value="consulting">Konsultacje techniczne</option>
+                        <option value="other">Inne</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Szczegóły projektu</label>
+                    <textarea id="message" name="message" required placeholder="Opisz swój projekt, harmonogram i budżet..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+                <p id="formStatus" style="margin-top: 1rem; text-align: center; display: none;"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>PepeCodes</h3>
+                <p>Profesjonalne usługi backend Python i automatyzacji procesów biznesowych. Buduję niezawodne, skalowalne i bezpieczne systemy dla firm w całej Polsce.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Szybkie linki</h4>
+                <ul>
+                    <li><a href="#services">Usługi</a></li>
+                    <li><a href="#automation">Automatyzacja</a></li>
+                    <li><a href="#technologies">Technologie</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Usługi</h4>
+                <ul>
+                    <li><a href="#services">API REST-owe</a></li>
+                    <li><a href="#services">Backend webowy</a></li>
+                    <li><a href="#automation">Automatyzacja</a></li>
+                    <li><a href="#services">Konsultacje</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PepeCodes. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler with Formspree
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Wysyłanie...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formStatus.textContent = 'Dziękuję za wiadomość! Odpowiem najszybciej jak to możliwe.';
+                    formStatus.style.color = '#10b981';
+                    formStatus.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    formStatus.textContent = 'Ups! Coś poszło nie tak. Spróbuj ponownie.';
+                    formStatus.style.color = '#ef4444';
+                    formStatus.style.display = 'block';
+                }
+            } catch (error) {
+                formStatus.textContent = 'Ups! Coś poszło nie tak. Spróbuj ponownie.';
+                formStatus.style.color = '#ef4444';
+                formStatus.style.display = 'block';
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .tech-item, .why-item, .testimonial-card, .benefit-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
