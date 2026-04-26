@@ -63,10 +63,6 @@
             var originalText = btn.innerHTML;
             var formData = new FormData(contactForm);
 
-            if (formData.get('_gotcha')) {
-                return;
-            }
-
             btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Wysyłam...</span>';
             btn.disabled = true;
 
@@ -82,18 +78,30 @@
                     'Accept': 'application/json'
                 }
             }).then(function (response) {
-                if (!response.ok) {
-                    throw new Error('Formspree request failed');
-                }
+                return response.json().catch(function () {
+                    return {};
+                }).then(function (payload) {
+                    if (!response.ok) {
+                        var errorMessage = 'Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na email.';
 
+                        if (payload.errors && payload.errors.length > 0 && payload.errors[0].message) {
+                            errorMessage = payload.errors[0].message;
+                        }
+
+                        throw new Error(errorMessage);
+                    }
+
+                    return payload;
+                });
+            }).then(function () {
                 contactForm.reset();
                 contactForm.style.display = 'none';
                 if (formSuccess) {
                     formSuccess.classList.add('show');
                 }
-            }).catch(function () {
+            }).catch(function (error) {
                 if (formStatus) {
-                    formStatus.textContent = 'Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na email.';
+                    formStatus.textContent = error && error.message ? error.message : 'Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na email.';
                     formStatus.classList.add('show', 'error');
                 }
             }).then(function () {
