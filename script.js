@@ -4,6 +4,7 @@
     var navLinks = document.getElementById('navLinks');
     var contactForm = document.getElementById('contactForm');
     var formSuccess = document.getElementById('formSuccess');
+    var formStatus = document.getElementById('formStatus');
 
     window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
@@ -54,19 +55,53 @@
         observer.observe(el);
     });
 
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-        var btn = contactForm.querySelector('.btn');
-        var originalText = btn.innerHTML;
-        btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Wysyłam...</span>';
-        btn.disabled = true;
+            var btn = contactForm.querySelector('.btn');
+            var originalText = btn.innerHTML;
+            var formData = new FormData(contactForm);
 
-        setTimeout(function () {
-            contactForm.style.display = 'none';
-            formSuccess.classList.add('show');
-        }, 1500);
-    });
+            if (formData.get('_gotcha')) {
+                return;
+            }
+
+            btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Wysyłam...</span>';
+            btn.disabled = true;
+
+            if (formStatus) {
+                formStatus.textContent = '';
+                formStatus.classList.remove('show', 'error');
+            }
+
+            fetch(contactForm.action, {
+                method: contactForm.method || 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(function (response) {
+                if (!response.ok) {
+                    throw new Error('Formspree request failed');
+                }
+
+                contactForm.reset();
+                contactForm.style.display = 'none';
+                if (formSuccess) {
+                    formSuccess.classList.add('show');
+                }
+            }).catch(function () {
+                if (formStatus) {
+                    formStatus.textContent = 'Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na email.';
+                    formStatus.classList.add('show', 'error');
+                }
+            }).then(function () {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
+        });
+    }
 
     var style = document.createElement('style');
     style.textContent = '@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}';

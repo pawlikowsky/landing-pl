@@ -793,6 +793,31 @@ section {
     justify-content: center;
 }
 
+.form-honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-status {
+    display: none;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.form-status.show {
+    display: block;
+}
+
+.form-status.error {
+    color: #f87171;
+}
+
 .form-success {
     display: none;
     text-align: center;

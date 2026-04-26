@@ -402,7 +402,10 @@ mcp = FastMCP(<span class="code-string">"automation"</span>)
                 <span class="section-tag">Kontakt</span>
                 <h2 class="section-title" id="kontakt-title">Porozmawiajmy o Twoim projekcie</h2>
                 <p class="section-subtitle">Bezpłatna konsultacja wstępna — opowiedz nam o swoim wyzwaniu, a powiemy Ci, jak możemy pomóc</p>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xnjlyqow" method="POST">
+                    <input type="hidden" name="_subject" value="Nowe zapytanie ze strony PepeCodes">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Imię i nazwisko</label>
@@ -432,8 +435,9 @@ mcp = FastMCP(<span class="code-string">"automation"</span>)
                         Wyślij wiadomość
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                     </button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
                 </form>
-                <div class="form-success" id="formSuccess">
+                <div class="form-success" id="formSuccess" role="status" aria-live="polite">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                     <h3>Dziękuję za wiadomość!</h3>
                     <p>Odpowiem najszybciej jak to możliwe — zazwyczaj w ciągu 24h.</p>
